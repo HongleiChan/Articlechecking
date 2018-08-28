@@ -9,6 +9,11 @@
         </el-tab-pane>
       </el-tabs>
     </div>
+    <div>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </div>
   </div>
 </template>
 
@@ -24,6 +29,12 @@ export default {
       console.log(tab, event);
     }
   },
+  watch:{
+    'activeName':function (val) {
+      let urlStr = '/' + val;
+      this.$router.push(urlStr);
+    }
+  }
 }
 </script>
 
