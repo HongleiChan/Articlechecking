@@ -1,23 +1,33 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+  <div>
+    <el-header align="center"> <h1>文档查重</h1></el-header>
+    <div>
+      <el-tabs  v-model="activeName" type="card"  @tab-click="handleClick" class="tab">
+        <el-tab-pane label="按文章查重" name="Article">
+        </el-tab-pane>
+        <el-tab-pane label="按段落查重" name="Paragraph" >
+        </el-tab-pane>
+      </el-tabs>
+    </div>
+
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  data(){
+    return {
+      activeName:'Article'
+    }
+  },
+  methods: {
+    handleClick(tab, event) {
+      console.log(tab, event);
+    }
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
