@@ -2,7 +2,7 @@
   <div>
     <el-form ref="form" :model="paragraph_form" label-width="100px" >
       <el-form-item label="段落:">
-        <el-input  type="textarea" :rows="7" placeholder="请输入内容" v-model="paragraph_form.content" style="width: 100% "
+        <el-input  type="textarea" :rows="10" placeholder="请输入内容" v-model="paragraph_form.content" style="width: 100% "
         ></el-input>
       </el-form-item>
       <el-form-item label="相似度阈值:">
@@ -36,6 +36,7 @@
     methods: {
       onSubmit() {
         console.log('submit!');
+        this.$router.push({name:'Result'});
       }
     }
   }
