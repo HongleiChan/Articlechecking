@@ -27,7 +27,7 @@
     layout="prev, pager, next"
     :total="80" align="center">
   </el-pagination>
-  <div>
+  <div align="center" style="margin-top: 30px">
     <el-button type="primary" @click="onSubmit">返回</el-button>
   </div>
 </div>
