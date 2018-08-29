@@ -25,7 +25,7 @@
           </tr>
           <tr>
             <th>相似部分</th>
-            <td style="width: 80%;height: 500px"><p>
+            <td class="contentco"><p>
               {文字高亮}
             </p></td>
           </tr>
@@ -46,6 +46,9 @@ data(){
 </script>
 
 <style>
+  .contentco{
+    width: 80%;height: 200px;font-size: 18px
+  }
   table {
     width: 200px;
     min-height: 25px;

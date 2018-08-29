@@ -22,7 +22,7 @@
           <el-tooltip class="item" effect="dark" content="拖动文件到框中即可上传" placement="top">
           <el-button size="small" type="primary">点击上传</el-button>
           </el-tooltip>
-          <div slot="tip" class="el-upload__tip">只能上传doc/docx文件，且不超过500kb</div>
+          <div slot="tip" class="el-upload__tip">只能上传doc/docx文件</div>
         </el-upload>
       </el-form-item>
       <el-form-item label="相似度阈值:">
