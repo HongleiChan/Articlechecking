@@ -6,7 +6,7 @@
       :data="BasicData"
       stripe
       border
-      fit="true"
+      fit
       >
       <el-table-column prop="title" label=""  width="300px">
       </el-table-column>
@@ -19,6 +19,16 @@
   </div>
   <div>
     <report></report>
+    <report></report>
+    <report></report>
+  </div>
+  <el-pagination
+    background
+    layout="prev, pager, next"
+    :total="80" align="center">
+  </el-pagination>
+  <div>
+    <el-button type="primary" @click="onSubmit">返回</el-button>
   </div>
 </div>
 </template>
@@ -41,6 +51,11 @@ export default {
         message:'',
       }
       ]
+    }
+  },
+  methods:{
+    onSubmit(){
+      this.$router.push({name:'Article'});
     }
   }
 }
