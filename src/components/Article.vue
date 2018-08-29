@@ -58,7 +58,7 @@ export default {
   methods: {
     onSubmit() {
       console.log('submit!');
-      this.$router.push({name:'Result'});
+      this.$router.push({name:'ArtResult'});
     },
     handleRemove(file, fileList) {
       console.log(file, fileList);

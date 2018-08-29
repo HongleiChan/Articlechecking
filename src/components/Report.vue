@@ -7,17 +7,19 @@
             <th style="width: 5%">序号</th>
             <td style="width: 45%">{id}</td>
             <th style="width: 5%">相似比</th>
+            <el-tooltip class="item" effect="dark" :content=SimilarityDe placement="top">
             <td style="width: 45%">{Similarity degree}</td>
+            </el-tooltip>
           </tr>
         </table>
         <table border="1px" style="width: 100%">
-          <tr>
-            <th style="width: 4.27%;">标题</th>
-            <td style="width: 80%;">{title}</td>
+          <tr v-show="chek">
+            <th >标题</th>
+            <td >{title}</td>
           </tr>
           <tr>
-            <th>发表时间</th>
-            <td>date</td>
+            <th style="width: 4.27%;">发表时间</th>
+            <td style="width: 80%;">date</td>
           </tr>
           <tr>
             <th>来源</th>
@@ -39,9 +41,19 @@
 export default {
 data(){
   return{
-    activeNames:'1'
+    activeNames:'1',
+    SimilarityDe:'1',
   }
-}
+},
+  computed:{
+    chek(){
+      var  path = this.$route.path;
+      //console.log(path)
+      if(path == '/Paragraph/Result')
+        return false;
+      else return true
+    }
+  }
 }
 </script>
 
