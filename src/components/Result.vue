@@ -15,6 +15,7 @@
     </el-table>
     <el-header> <h2>相似片段位置图</h2></el-header>
     <div><img src=""/></div>
+    <div style="width: 80%"></div>
     <el-header> <h2>报告详情</h2></el-header>
   </div>
   <div>
