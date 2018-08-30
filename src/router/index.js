@@ -18,16 +18,6 @@ export default new Router({
       component: Article
     },
     {
-      path:'/Article/Result',
-      name:'ArtResult',
-      component: Article
-    },
-    {
-      path:'/Paragraph/Result',
-      name:'ParResult',
-      component: Paragraph
-    },
-    {
       path:'/Paragraph',
       name:'Paragraph',
       component: Paragraph
