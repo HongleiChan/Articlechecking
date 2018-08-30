@@ -19,11 +19,14 @@
         <el-button type="primary" @click="onSubmit">提交</el-button>
       </el-form-item>
     </el-form>
+    <div  id="/Paragraph/Result" style="padding-top: 400px">
+      <result></result>
+    </div>
   </div>
 </template>
 
-<script>
-  import Result from "@/components/Result";
+<script type="text/javascript">
+  import Result from "./Result";
   export default {
     components: {
       'result':Result
@@ -40,7 +43,9 @@
     methods: {
       onSubmit() {
         console.log('submit!');
-        this.$router.push({path:'/Paragraph/Result'});
+        scroll(0,900)
+        //location.hash='/Paragraph/Result'
+        //this.$router.push({path:'/Paragraph/Result'});
       }
     }
   }

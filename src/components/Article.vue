@@ -39,6 +39,9 @@
         <el-button type="primary" @click="onSubmit">提交</el-button>
       </el-form-item>
     </el-form>
+    <div style="padding-top: 200px" id="/Article/Result">
+      <result></result>
+    </div>
   </div>
 </template>
 
@@ -62,8 +65,10 @@ export default {
   methods: {
     onSubmit() {
       console.log('submit!');
-      this.$router.push({name:'ArtResult'});
-      this.$emit('Result',this.article_form.content)
+      scroll(0,1000)
+      //location.hash='/Article/Result'
+      //this.$router.push({name:'ArtResult'});
+      //this.$emit('Result',this.article_form.content)
     },
     handleRemove(file, fileList) {
       console.log(file, fileList);

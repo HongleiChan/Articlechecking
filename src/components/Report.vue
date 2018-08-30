@@ -47,7 +47,7 @@ data(){
     chek(){
       var  path = this.$route.path;
       //console.log(path)
-      if(path == '/Paragraph/Result')
+      if(path == '/Paragraph')
         return false;
       else return true
     }

@@ -29,7 +29,7 @@
     :total="80" align="center">
   </el-pagination>
   <div align="center" style="margin-top: 30px">
-    <el-button type="primary" @click="onSubmit">返回</el-button>
+    <el-button type="primary" @click="onSubmit">回到顶部</el-button>
   </div>
 </div>
 </template>
@@ -51,13 +51,14 @@ export default {
         title:'总相似率:',
         message:'',
       }
-      ]
+      ],
+      scrolldelay:''
     }
   },
   methods:{
     onSubmit(){
-      this.$router.go(-1);
-      console.log(this.content);
+      scroll(0,0);
+      //this.$router.go(-1);
     }
   }
 }

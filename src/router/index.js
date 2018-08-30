@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Article from '@/components/Article'
 import Paragraph from '@/components/Paragraph'
-import Result from '@/components/Result'
 
 
 Vue.use(Router)
@@ -21,12 +20,12 @@ export default new Router({
     {
       path:'/Article/Result',
       name:'ArtResult',
-      component: Result
+      component: Article
     },
     {
       path:'/Paragraph/Result',
       name:'ParResult',
-      component: Result
+      component: Paragraph
     },
     {
       path:'/Paragraph',
