@@ -15,7 +15,7 @@
     </el-table>
     <el-header> <h2>相似片段位置图</h2></el-header>
     <div><img src=""/></div>
-    <div style="width: 80%"></div>
+    <div class="content"></div>
     <el-header> <h2>报告详情</h2></el-header>
   </div>
   <div>
@@ -37,9 +37,9 @@
 <script>
   import Report from './Report'
 export default {
+
     components:{'report':Report},
   data() {
-
     return {
       BasicData: [{
         title:'报告编号:',
@@ -56,12 +56,20 @@ export default {
   },
   methods:{
     onSubmit(){
-      this.$router.push({name:'Article'});
+      this.$router.go(-1);
+      console.log(this.content);
     }
   }
 }
 </script>
 
 <style>
-
+.content{
+  width: 100%;
+  height: 400px;
+  border: black solid 1px;
+  overflow: scroll;
+  overflow-x: hidden;
+  font-size: 18px;
+}
 </style>

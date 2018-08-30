@@ -1,6 +1,6 @@
 <template>
   <div style="padding-bottom: 20px">
-      <el-collapse v-model="activeNames" style="width: 80%" accordion>
+      <el-collapse v-model="activeNames" style="width: 85%" accordion>
       <el-collapse-item title="结果" name="1" >
         <table border="1px" style="width: 100%">
           <tr>
@@ -21,7 +21,7 @@
           </tr>
           <tr>
             <th>来源</th>
-            <td colspan="3"><a href="www.baidu.com">百度</a></td>
+            <td colspan="3"><a href="https://www.baidu.com/">百度</a></td>
           </tr>
           <tr>
             <th>相似部分</th>

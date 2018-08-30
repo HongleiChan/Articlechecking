@@ -43,7 +43,11 @@
 </template>
 
 <script>
+  import Result from './Result'
 export default {
+  components:{
+    'result': Result
+  },
   data(){
     return{
       article_form:{
@@ -59,6 +63,7 @@ export default {
     onSubmit() {
       console.log('submit!');
       this.$router.push({name:'ArtResult'});
+      this.$emit('Result',this.article_form.content)
     },
     handleRemove(file, fileList) {
       console.log(file, fileList);

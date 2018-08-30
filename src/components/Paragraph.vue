@@ -23,7 +23,11 @@
 </template>
 
 <script>
+  import Result from "@/components/Result";
   export default {
+    components: {
+      'result':Result
+    },
     data(){
       return{
         paragraph_form:{
@@ -36,7 +40,7 @@
     methods: {
       onSubmit() {
         console.log('submit!');
-        this.$router.push({name:'ParResult'});
+        this.$router.push({path:'/Paragraph/Result'});
       }
     }
   }
