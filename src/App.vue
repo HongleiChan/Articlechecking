@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-header align="center"> <h1>文档查重</h1></el-header>
+    <el-header > <h1 align="center">文档查重</h1></el-header>
     <div>
       <el-tabs  v-model="activeName" type="card"  @tab-click="handleClick" class="tab"  stretch>
         <el-tab-pane label="按文章查重" name="Article">
