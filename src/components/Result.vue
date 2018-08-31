@@ -18,10 +18,18 @@
     <div class="content"></div>
     <el-header> <h2>报告详情</h2></el-header>
   </div>
-  <div>
-    <report></report>
-    <report></report>
-    <report></report>
+  <div v-show="chek" style="width: 85%">
+    <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+      <el-tab-pane label="标题重复" name="TitleReport">
+        <title-report></title-report>
+      </el-tab-pane>
+      <el-tab-pane label="正文重复" name="ArticleReport">
+        <article-report></article-report>
+      </el-tab-pane>
+    </el-tabs>
+  </div>
+  <div v-show="chek1" style="width: 85%">
+    <article-report></article-report>
   </div>
   <el-pagination
     background
@@ -35,10 +43,14 @@
 </template>
 
 <script>
-  import Report from './Report'
+  import TitleReport from './TitleReport'
+  import ArticleReport from './ArticleReport'
 export default {
 
-    components:{'report':Report},
+    components:{
+      'title-report':TitleReport,
+      'article-report':ArticleReport
+    },
   data() {
     return {
       BasicData: [{
@@ -52,14 +64,34 @@ export default {
         message:'',
       }
       ],
-      scrolldelay:''
+      scrolldelay:'',
+      activeName: 'TitleReport'
     }
   },
   methods:{
     onSubmit(){
       scroll(0,0);
       //this.$router.go(-1);
+    },
+    handleClick(tab, event) {
+      console.log(tab, event);
     }
+  },
+  computed:{
+      chek(){
+        var path = this.$route.path;
+        if(path == '/Article'){
+          return true;
+        }
+        else return false
+      },
+      chek1(){
+        var path = this.$route.path;
+        if(path == '/Paragraph'){
+          return true;
+        }
+        else return false
+      }
   }
 }
 </script>
