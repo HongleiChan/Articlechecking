@@ -1,6 +1,6 @@
 <template>
   <div style="padding-bottom: 20px">
-    <div>
+    <div style="">
       <el-collapse v-model="activeNames"  accordion>
         <el-collapse-item title="结果" name="1" >
           <table border="1px" style="width: 100%">
@@ -8,8 +8,12 @@
               <th style="width: 5%">序号</th>
               <td style="width: 45%">{id}</td>
               <th style="width: 5%">相似比</th>
-              <el-tooltip class="item" effect="dark" :content=SimilarityDe placement="top">
+              <el-tooltip class="item" effect="dark" placement="top">
                 <td style="width: 45%">{Similarity degree}</td>
+                <p slot="content" class="tooltip-content">
+                  标题相似度：{titlesimily}<br>
+                  正文相似度：{articlesimily}
+                </p>
               </el-tooltip>
             </tr>
             <tr v-show="chek">
