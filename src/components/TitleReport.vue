@@ -1,6 +1,6 @@
 <template>
   <div style="padding-bottom: 20px">
-      <div style="">
+      <div>
         <el-collapse v-model="activeNames" accordion>
         <el-collapse-item title="结果" name="1" >
           <table border="1px" style="width: 100%">

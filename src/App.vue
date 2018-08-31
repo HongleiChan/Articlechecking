@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="allcontent">
     <el-header > <h1 align="center">文档查重</h1></el-header>
     <div>
       <el-tabs  v-model="activeName" type="card"  @tab-click="handleClick" class="tab"  stretch>
@@ -9,7 +9,7 @@
         </el-tab-pane>
       </el-tabs>
     </div>
-    <div>
+    <div class="node">
       <keep-alive>
         <router-view></router-view>
       </keep-alive>
@@ -39,5 +39,10 @@ export default {
 </script>
 
 <style>
-
+  .allcontent{
+    width: 85%;margin-left: auto;margin-right: auto
+  }
+  .node{
+    width: 85%;margin-right: auto;margin-left: auto
+  }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div style="margin-right: auto;margin-left: auto">
-    <div style="width: 85%;">
+  <div>
+    <div>
       <el-form ref="form" :model="article_form" label-width="100px">
         <el-form-item label="标题:">
           <el-input type="text" v-model="article_form.title" style="width: 100%;padding-left: 0px" clearable></el-input>
@@ -42,7 +42,7 @@
       </el-form>
     </div>
 
-    <div style="padding-top: 200px" id="/Article/Result">
+    <div style="padding-top: 200px">
       <result></result>
     </div>
   </div>
