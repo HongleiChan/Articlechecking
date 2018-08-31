@@ -66,6 +66,6 @@ data(){
     min-height: 25px;
     line-height: 25px;
     text-align: left;
-    border-color: rgba(52,34,51,0.19);
+    border-color: #dcdfe6;
     border-collapse: collapse;}
 </style>

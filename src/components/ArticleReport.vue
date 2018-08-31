@@ -3,7 +3,7 @@
     <div style="">
       <el-collapse v-model="activeNames"  accordion>
         <el-collapse-item title="结果" name="1" >
-          <table border="1px" style="width: 100%">
+          <table border="1" style="width: 100%">
             <tr>
               <th style="width: 5%">序号</th>
               <td style="width: 45%">{id}</td>
@@ -70,6 +70,6 @@
     min-height: 25px;
     line-height: 25px;
     text-align: left;
-    border-color: rgba(52,34,51,0.19);
+    border-color: #dcdfe6;
     border-collapse: collapse;}
 </style>

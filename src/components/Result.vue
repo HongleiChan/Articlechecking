@@ -100,7 +100,7 @@ export default {
 .content{
   width: 100%;
   height: 400px;
-  border: black solid 1px;
+  border: #dcdfe6 solid 1px;
   border-radius: 5px;
   overflow: scroll;
   overflow-x: hidden;
@@ -109,7 +109,7 @@ export default {
 .nui-scroll{
   width: 100%;
   height: 400px;
-  border: black solid 1px;
+  border: #dcdfe6 solid 1px;
   border-radius: 5px;
   overflow: scroll;
   overflow-x: hidden;
