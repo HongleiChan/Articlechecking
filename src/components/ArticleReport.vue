@@ -70,6 +70,11 @@
     min-height: 25px;
     line-height: 25px;
     text-align: left;
-    border-color: #dcdfe6;
-    border-collapse: collapse;}
+    border:solid #dcdfe6;
+    border-width:1px 0px 0px 1px;}
+  td{
+    border:solid #dcdfe6;
+    border-width:0px 1px 1px 0px;
+    padding-left:10px;
+  }
 </style>
