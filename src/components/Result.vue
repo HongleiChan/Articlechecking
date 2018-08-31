@@ -74,7 +74,7 @@ export default {
       //this.$router.go(-1);
     },
     handleClick(tab, event) {
-      console.log(tab, event);
+      //console.log(tab, event);
     }
   },
   computed:{
