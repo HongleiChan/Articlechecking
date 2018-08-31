@@ -6,7 +6,7 @@
           <el-input type="text" v-model="article_form.title" style="width: 100%;padding-left: 0px" clearable></el-input>
         </el-form-item>
         <el-form-item label="文章:">
-          <el-input  type="textarea" :rows="10" placeholder="请输入内容" v-model="article_form.content" style="width: 100% "
+          <el-input  type="textarea" :rows="10" placeholder="请输入内容" v-model="article_form.content"
           ></el-input>
           <el-upload
             class="upload-demo"
@@ -86,6 +86,5 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
 </style>
